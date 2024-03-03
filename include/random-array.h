@@ -1,4 +1,7 @@
 
+struct ArrayInfo {
+    int* array;
+    int size;
+};
 
-
-int random_array(int size);
+struct ArrayInfo random_array(int size);
