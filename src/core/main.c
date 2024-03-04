@@ -5,52 +5,44 @@
 
 #include "random-array.h"
 
+#define RANDOM_ARRAY_SIZE 10
 
-#define print(x) printf("%d\n" , x)
+struct Node {
+    int value;
+    struct Node* node;
+};
 
 
-#define loop(x) (int i = 0; i < x; i++)
+void print_linked_list(struct Node* node) {
+    struct Node* index;
+    index = node;
+    printf("%d" , index->node == NULL);
+    while(index->node == NULL) {
+        printf("%d\n" , index->value);
+        index = index->node;
+    }
 
+    printf("%d\n" , index->value);
+}
 
 
 int main() {
 
-    int number = -3;
-    int result;
-    double base , power , power_result;
-    base = 5;
-    char* str;
+   
 
-    for(int i = 0; i < 20; i++) {
-        str[i] = 'T';
-    }
+    struct Node node_1 , node_2 , node_3;
+    node_1.value = 10;
+    node_1.node = node_2.node;
 
-    int test = printf("%d" , number);
-    printf("%d" , test);
-    // sprintf(str, "%d",number);
-    // int test = sizeof(str);
-    // int counter = 0;
-    // for(int i = 0; i < 20; i++) {
-    //     if (str[i] != 'T' && str[i] != '-') {
-    //         counter++;
-    //     }
-    // }
-    // printf("%d\n" , counter);
-    // power = counter - 1;
+    node_2.value = 20;
+    node_2.node = node_3.node;
 
-    // printf("%f\n" , power);
+    node_2.value = 30;
+    node_2.node = NULL;    
 
-    // power_result = pow(base , power);   
 
-    // result = ((int)power_result) * number;
-    // printf("%d" , result);
+    print_linked_list(&node_1);
 
-    // struct ArrayInfo array_info;
-    // array_info = random_array(10);
-
-    // for(int i = 0; i < array_info.size; i++) {
-    //     print(array_info.array[i]);
-    // }
 
     return 0;
 }

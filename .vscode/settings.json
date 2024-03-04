@@ -2,7 +2,10 @@
     "files.associations": {
         "array": "c",
         "xlocale": "c",
-        "random-array.h": "c"
+        "random-array.h": "c",
+        "algorithm": "c",
+        "cstdlib": "c",
+        "random": "c"
     },
     "C_Cpp.errorSquiggles": "disabled"
  
