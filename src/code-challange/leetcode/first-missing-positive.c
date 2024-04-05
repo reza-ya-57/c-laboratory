@@ -2,12 +2,14 @@
 #include <stdlib.h>
 
 
-
+// functions definition
 int firstMissingPositive(int* nums, int numsSize);
 
 
-int main() {
 
+
+int main() {
+    // sample data
     int nums[] = { 3 , 4 , -1 , 1 };
 
     int result = firstMissingPositive(nums , 4);
@@ -32,7 +34,7 @@ int firstMissingPositive(int* nums, int numsSize) {
             max_positive = nums[i];
         // printf("i : %d\n" , nums[i]);
     }
-
+    
     if (min_positive < 0) 
         min_positive = 1;
 

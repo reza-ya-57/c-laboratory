@@ -2,48 +2,24 @@
 #include <stdlib.h>
 #include <string.h>
 
-typedef struct p Person;
 
-struct p {
-    int age;
-    char* firstName;
-    char* lastName;
-    void(*printFullName)(char* firstName , char* lastName);
-};
+// functions definition
+char* concat_string(char* str1 , char* str2 , const char* with);
 
-
-
-int sum(int a , int b) {
-    return a + b;
-}
 
 int main() {
-
-    Person person;
-    person.age = 30;
-    person.firstName = "reza";
-    person.lastName = "yari";
-    const char* addToFirstName = "test";    
-    long long newLen = strlen(person.firstName) + strlen(addToFirstName);
-
-
-    strcat_s(person.firstName , newLen , addToFirstName);
-    printf("%s\n" , person.firstName);
-
-    // if (result == NULL || *result == -1) {
-    //     puts("somthing goes wrong!");
-    //     exit(-1);
-    // }
-    // person.firstName = person.firstName + "test";
-
-    printf("%s\n" , person.firstName);
-
-    printf("%d\n" , person.age);
-    
-    
-
-    // printf("%d\n" , result);
+    char* firstName = malloc(5);
+    char* lastName = malloc(5);
+    char* result = concat_string(firstName , lastName , "");
+    printf("result is: %s\n" , result);
     return 0;
+}
+
+char* concat_string(char* str1 , char* str2 , const char* with){
+    if (with == NULL) {
+        printf("with is empty");
+    }
+    return "test";
 }
 
 
